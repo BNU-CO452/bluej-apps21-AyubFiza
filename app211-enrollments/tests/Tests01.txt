@@ -1,0 +1,12 @@
+Student student1 = new Student("Fiza Ayub", 22133861);
+Course bit = new Course("BB1BMI1", "Business Management and Information Technology");
+student1.print();
+ Student ID: 22133861 Name: Fiza Ayub
+student1.enrol(bit);
+student1.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BB1BMI1: Business Management and Information Technology
+

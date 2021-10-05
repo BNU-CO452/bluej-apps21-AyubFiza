@@ -11,9 +11,9 @@ public class Student
 {
     // A unique 8 digit BNU identifier
     private int id;
-    // the student's full name
+    //   
     private String name;
-    // The course the student is enrolled on
+    // 
     private Course course;
     
     /**
