@@ -1,0 +1,13 @@
+Student student1 = new Student("Fiza Ayub", 22133861);
+Course bIT = new Course("BB1BMI1", "Business Management and Information Technology");
+Module module1 = new Module("BB1BMI1", "Business Management and Information Technology");
+module1.print();
+ Module Code: BB1BMI1: Business Management and Information Technology
+
+bIT.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BB1BMI1: Business Management and Information Technology
+

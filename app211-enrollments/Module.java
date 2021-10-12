@@ -48,7 +48,7 @@ public class Module
     
     public void setCredit(int credit)
     {
-       this.credit = credit;
+       this.credit = credit; 
     }  
     
     /**
