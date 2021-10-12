@@ -3,26 +3,25 @@
  * a student at BNU.  The class also contains information 
  * concerning the course the student is currently enrolled on
  * 
- * @author Michael Kölling and David Barnes
+ * @author Fiza Ayub
  * @modified by Derek Peacock and Nicholas Day
- * @version 2021:08:15
+ * @version 0.1     
  */
 public class Student
 {
     // A unique 8 digit BNU identifier
-    private int id;
+    private int id; 
     //   
-    private String name;
+    private String name; 
     // 
     private Course course;
-    
     /**
      * Create a new student with a given name and ID number.
      */
     public Student(String name, int id)
     {
-        this.name = name;
-        this.id = id;
+        this.name = name; 
+        this.id = id; 
     }
 
     /**

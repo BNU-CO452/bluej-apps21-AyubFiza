@@ -4,15 +4,17 @@ import java.util.*;
  * This class contains information about an undergraduate course
  * at BNU together with a list of student who are enrolled
  *
- * @author Derek Peacock
- * @version 1.0 14/07/2021
+ * @author Fiza Ayub 
+ * @version 1.0 12/10/2021
  */
 public class Course
 {
     // A unique identifier e.g. BT1CTG1
-    private String code;
+    private String code; 
     // The full title including qualification and subject
-    private String title;
+    private String title; 
+    
+    private Module module;
     
     /**
      * Create a Course with a maximum number of enrolments. 
