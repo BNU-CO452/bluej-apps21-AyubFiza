@@ -18,3 +18,15 @@ co452.print();
 co452.print();
  Module Code: CO452: Programming Concepts
 
+Module co452 = new Module("CO452", "Programming Concepts");
+co452.print();
+ Module Code: CO452: Programming Concepts
+
+co452.getCredit()
+    returned int 0
+co452.setCredit(15);
+co452.setCredit(0);
+co452.setCredit(15);
+co452.print();
+ Module Code: CO452: Programming Concepts
+
