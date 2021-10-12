@@ -11,3 +11,10 @@ bIT.print();
 
  Course Code: BB1BMI1: Business Management and Information Technology
 
+Module co452 = new Module("CO452", "Programming Concepts");
+co452.print();
+ Module Code: CO452: Programming Concepts
+
+co452.print();
+ Module Code: CO452: Programming Concepts
+
