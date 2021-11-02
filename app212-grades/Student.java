@@ -3,20 +3,21 @@ import java.util.*;
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
  * 
- * @author Michael Kölling and David Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2021-08-18
+ * @author Fiza Ayub
+ * Modified by Fiza Ayub
+ * @version 19-10-2021
  */
 public class Student
 {
     // the student ID
-    private int id;
+    private int id; 
     // the student's full name
     private String name;
     // The course the student is enrolled on
     private Course course;
     // The marks awarded for the modules on the course
     private ArrayList<ModuleMark> marks;
+    private ArrayList<Student> students;
     
     /**
      * This constructor creates a new student with a
@@ -24,7 +25,7 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Fiza",22133861);
     }
     
     /**
@@ -32,12 +33,14 @@ public class Student
      */
     public Student(String name, int id)
     {
-        this.name = name;
+        this.name = name; 
         this.id = id;
         
         marks = new ArrayList<ModuleMark>();
     }
-
+    /**
+     * Adds a mark to the student class' module mark.
+     */
     public void addMark(ModuleMark mark)
     {
         marks.add(mark);
@@ -96,17 +99,29 @@ public class Student
         System.out.println(" Student ID: " + id + ", " + name);
     }
     
-    public void printCourse()
+    /**
+     * Print the course of the student.
+     */public void printCourse()
     {
         this.print();
         course.print();
     }
     
-    private void printModules()
-    {
-
+    /**
+     * Prints the marks of the student's modules.
+     * /
+     */private void printModules()
+    { for (ModuleMark moduleMark : marks )
+        {moduleMark.print();
+            System.out.println("\t" + course.convertToGrade(moduleMark.getValue()));
+        }
     }
     
+    
+    /** 
+     * Prints the transcript with information about the course like
+     * the course, modules, final grades.
+     */
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");

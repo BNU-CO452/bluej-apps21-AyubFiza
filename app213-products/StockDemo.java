@@ -4,8 +4,8 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Fiza Ayub
+ * @version 02/11/2021
  */
 public class StockDemo
 {
@@ -26,6 +26,13 @@ public class StockDemo
         stock.add(new Product(101, "Samsung Galaxy S20"));
         stock.add(new Product(102, "Apple iPhone 12"));
         stock.add(new Product(103, "Google Pixel 4A"));
+        stock.add(new Product(104, "Apple iPad Air"));
+        stock.add(new Product(105, "Apple Airpods Pro"));
+        stock.add(new Product(106, "Google Chromebook"));
+        stock.add(new Product(107, "Samsung Z Flip"));
+        stock.add(new Product(108, "HP Inspiron 15 Laptop"));
+        stock.add(new Product(109, "Beats Headphones"));
+        stock.add(new Product(110, "Apple Pen"));
     }
     
     /**
@@ -45,14 +52,37 @@ public class StockDemo
         stock.print();        
 
         sellProducts();
-        stock.print();        
+        stock.print();     
+        
+    
     }
     
     private void buyProducts()
     {
+        stock.buyProduct(101, 6);
+        stock.buyProduct(102, 8);
+        stock.buyProduct(103, 8);
+        stock.buyProduct(104, 7);
+        stock.buyProduct(105, 9);
+        stock.buyProduct(106, 5);
+        stock.buyProduct(107, 9);
+        stock.buyProduct(108, 5);
+        stock.buyProduct(109, 6);
+        stock.buyProduct(110, 6);
+        
     }
 
     private void sellProducts()
-    {
+    {   stock.sellProduct(101, 4);
+        stock.sellProduct(102, 6);
+        stock.sellProduct(103, 7);
+        stock.sellProduct(104, 5);
+        stock.sellProduct(105, 7);
+        stock.sellProduct(106, 2);
+        stock.sellProduct(107, 8);
+        stock.sellProduct(108, 4);
+        stock.sellProduct(109, 4);
+        stock.sellProduct(110, 3);
+        
     }    
 }

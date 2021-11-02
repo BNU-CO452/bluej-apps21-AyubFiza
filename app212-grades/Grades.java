@@ -3,8 +3,8 @@
  * These are the grades used by BNU to classify 
  * students at the completion of their course
  * Each value is the top percentage mark for that grade
- * @author Derek Peacock and Nicholas Day
- * @version 1.0 01/10/2020
+ * @author Fiza Ayub
+ * @version 02/11/2021
  */
 public enum Grades
 {
@@ -17,11 +17,18 @@ public enum Grades
     
     private final int value;
     
+        
+    /**
+    * Stores an integer value for a given grade.
+    */
     private Grades(int value)
     {
         this.value = value;
     }
     
+    /**
+    * Returns the Grade for a stuent
+    */
     public int getValue()
     {
         return value;

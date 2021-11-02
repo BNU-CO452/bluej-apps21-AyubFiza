@@ -45,7 +45,8 @@ public class StockList
      * @param amount The amount to increase the quantity by.
      */
     public void buyProduct(int productID, int amount)
-    {
+    { Product product = findProduct(productID) ;
+     product.increaseQuantity(amount);
     }
     
     /**
@@ -54,16 +55,21 @@ public class StockList
      */
     public Product findProduct(int productID)
     {
+        for(Product product : stock )
+        {
+            if(product.getID() == productID)
+            {
+                return product;
+            }
+        }
         return null;
     }
-    
-    
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int productID)
+    public void sellProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
         
@@ -71,7 +77,7 @@ public class StockList
         {
             if(product.getQuantity() > 0)
             {
-                product.decreaseQuantity(1);
+                product.decreaseQuantity(amount);
                 
                 // printout message
             }
@@ -84,7 +90,7 @@ public class StockList
         {
             // printout message
         }
-    }    
+    }
 
     
     /**
@@ -133,7 +139,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Stock List");
+        System.out.println(" Fiza's Stock List");
         System.out.println(" ====================");
         System.out.println();
     }
