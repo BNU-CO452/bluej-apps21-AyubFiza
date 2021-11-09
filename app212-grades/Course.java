@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 /**
  * This class stores information about a course
- * that enrolled students may want to complete
+ * that enrolled students may want to complete.
  *
  * @author Fiza Ayub
- * @version 29/10/2021
+ * @version 24/10/2021
  */
 public class Course
 {
@@ -18,14 +18,16 @@ public class Course
     private String title;
     
     private Grades finalGrade;
-     
-    public Course()
-    {
-        this("G400", "BSc Computing");
-    }
     
     /**
-     * Constructor for objects of class Course
+     * This constructor creates a new course with a fixed code and title.
+     */
+    public Course()
+    {
+        this("B400", "Bsc Business Management and Information Technology");
+    }
+    /**
+     * Constructor for objects of class Course.
      */
     public Course(String code, String title)
     {
@@ -34,17 +36,16 @@ public class Course
         this.title = title;
         
         modules  = new ArrayList<Module>();
+        students = new ArrayList<Student>();
         
         createModules();
     }
-
     /**
-     * Create four modules and add them to the
-     * modules list for testing purposes.  These
-     * must be your four modules.
+     * This method creates four predetermined modules, and is used to speed up the testing of an app each time it is booted and run.
      */
     public void createModules()
-    { Module co452 = new Module ("CO452", "Programming Concepts");
+    {
+        Module co452 = new Module ("CO452", "Programming Concepts");
         Module co456 = new Module ("CO456", "Web Development");
         Module co454 = new Module ("CO454", "Digital Technologies");
         Module co450 = new Module ("CO450", "Computer Architectures");
@@ -52,9 +53,11 @@ public class Course
         addModule(co456);
         addModule(co454);
         addModule(co450);
-
     }
-    
+
+    /**
+     * Adds a module to the course.
+     */
     public void addModule(Module module)
     {
         if(modules.size() < MAXN_MODULES)
@@ -64,11 +67,20 @@ public class Course
     }
     
     /**
+     * Adds a student to the course.
+     */
+    public void addStudent(Student student)
+    {
+        if(students.size() < MAXN_STUDENTS)
+        {
+            students.add(student);
+        }
+    }
+    /**
      * This method converts input marks into Grade values.
      */
     public Grades convertToGrade(int mark)
     {
-        
         if(mark >= 0 && mark <= 39)
             return Grades.F;
         else if(mark >= 40 && mark <= 49)
@@ -81,16 +93,13 @@ public class Course
             return Grades.A;
         else 
             return Grades.NS;
-
     }
-    
     /**
      * Calculate the average mark from the four module marks
      * and convert that into a final grade.
      */
     public Grades calculateGrade(ArrayList<ModuleMark> marks)
     {
-
         int total = 0;
         int finalMark = 0;
         for(ModuleMark mark : marks)
@@ -100,12 +109,11 @@ public class Course
         finalMark = total / 4;
         finalGrade = convertToGrade(finalMark);
         return finalGrade;
-
     }
     
     /**
      * Prints out the details of a course and the
-     * four modules
+     * four modules.
      */
     public void print()
     {
@@ -117,10 +125,25 @@ public class Course
     }
     
     /**
-     * Print the course's four modules
+     * Print the course's four modules.
      */
     public void printModules()
     {
-        System.out.println();
+        for (Module module : modules)
+        {
+            module.print();
+            module.printCredit();
+        }
+    }
+    
+    /**
+     * Print's the course's four students.
+     */
+    public void printStudents()
+    {
+        for (Student student : students)
+        {
+            student.print();
+        }
     }
 }

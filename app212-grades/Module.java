@@ -1,10 +1,11 @@
 /**
  * Modules form part of a course and contain
  * credits that students achieve when they
- * pass the module with a mark of 40+
- *
- * @author Fiza Ayub
- * @version 1.0 02/11/2021
+ * pass the module with a mark of 40%
+ * 
+ * @author     
+ * Modified by Fiza Ayub
+ * @version19-10-2021
  */
 public class Module
 {
@@ -13,32 +14,30 @@ public class Module
     
     private String code;
     private String title;
-
+    private int credits;
+    private Course course;
+    
     /**
      * Constructor for objects of class Module 
-     * which initialises the module code and title
+     * which initialises the module code and title.
      */
     public Module(String code, String title)
     {
         this.code = code;
         this.title = title;
-    
+        credits = 15;
     }
-
-   
     /**
-    * Returns the code of the module.
-    */
-     public String getCode()
+     * Returns the code of the module.
+     */
+    public String getCode()
     {
         return code;
     }
-    
-    
     /**
-    * Returns the title of the module.
-    */
-     public String getTitle()
+     * Returns the title of the module.
+     */
+    public String getTitle()
     {
         return title;
     }
@@ -55,15 +54,20 @@ public class Module
     }
     
     /**
-     * Print out the credit on the current line
-     * so that a mark and grade could be added
+     * Prints the credits of the module.
      */
     public void printCredit()
     {
-        System.out.print("\t  " + CREDIT + " credits");
+        System.out.print("\t " + CREDIT + " credits");
     }
-
-     
     
-
+    /**
+    * Prints out the details of module.
+    */
+    public void printModuleDetails()
+    {
+        System.out.println("Module code: " + code);
+        System.out.println("Module title: " + title);
+        System.out.println("Module credit: " + credits);       
+    }
 }

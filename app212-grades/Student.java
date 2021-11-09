@@ -111,9 +111,9 @@ public class Student
      * Prints the marks of the student's modules.
      * /
      */private void printModules()
+     
     { for (ModuleMark moduleMark : marks )
-        {moduleMark.print();
-            System.out.println("\t" + course.convertToGrade(moduleMark.getValue()));
+        { moduleMark.print();                                                         
         }
     }
     
@@ -137,7 +137,8 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
-       
+        printModules();
+        
         Grades finalGrade = course.calculateGrade(marks);
         
         System.out.println();

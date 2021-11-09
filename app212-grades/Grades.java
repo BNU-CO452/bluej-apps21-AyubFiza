@@ -17,18 +17,16 @@ public enum Grades
     
     private final int value;
     
-        
     /**
-    * Stores an integer value for a given grade.
-    */
+     * Stores an integer value for a given grade.
+     */
     private Grades(int value)
     {
         this.value = value;
     }
-    
     /**
-    * Returns the Grade for a stuent
-    */
+     * Returns the Grade for a student.
+     */
     public int getValue()
     {
         return value;
