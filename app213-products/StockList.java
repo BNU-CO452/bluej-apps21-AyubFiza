@@ -11,6 +11,10 @@ public class StockList
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    //
+    private int amountRequired;
+    //Finds the product key
+    private boolean isFound;
 
     /**
      * Initialise the stock manager.
@@ -19,22 +23,33 @@ public class StockList
     {
         stock = new ArrayList<Product>();
     }
-
+    
+    public void add(Product item)
+    {   
+            stock.add(item);
+    }
+    
     /**
      * Add a product to the list.
      * @param item The product item to be added.
      */
-    public void add(Product item)
-    {
-        stock.add(item);
+    public Product remove(int productID)
+    {       
+        Product product = findProduct(productID);
+        if (product!= null)
+            stock.remove(product);
+        else
+            System.out.println("Could not find student");
+            return product;
     }
+    
     
     /**
      * A method to buy a single quantity of the product
      */
     public void buyProduct(int productID)
     {
-        buyProduct(productID, 1);
+      buyProduct(productID, 1);
     }
     
     
@@ -50,6 +65,34 @@ public class StockList
     }
     
     /**
+     * Check levels of stock
+     * If the stock is less than minimum it will buy in more
+     */
+    public void lowStocklist()
+    {
+        printHeading();
+        for(Product product: stock)
+        { 
+            if(product.getQuantity() < 3)
+                product.increaseQuantity(10);
+    }
+    System.out.println();
+    for(Product product : stock)
+    {       
+      product.print();
+    }
+    }
+
+    public void searchForProduct(String productName)
+        {   
+            for (Product product: stock)
+                if(productName.contains(productName))
+                {   
+                    System.out.println(product); 
+                }
+            }
+                                    
+    /**
      * Find a product to match the product id,
      * if not found return null
      */
@@ -64,12 +107,21 @@ public class StockList
         }
         return null;
     }
+
+    /**
+     * Sells one product
+     */
+    public void sellProduct(int productID)
+    {
+        sellProduct(productID , 1);
+    }
+    
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int productID, int amount)
+    public String sellProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
         
@@ -78,21 +130,23 @@ public class StockList
             if(product.getQuantity() > 0)
             {
                 product.decreaseQuantity(amount);
-                
                 // printout message
+                return String.valueOf(product.getQuantity());
             }
             else
             {
+                amountRequired = -1*(product.getQuantity()-amount);
                 // printout message
+                return "Product Quantity two low requires " + amountRequired +"more stock of "+ product;
             }
         }
         else
         {
             // printout message
+            return("Product not Found");
         }
     }
 
-    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -139,7 +193,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Fiza's Stock List");
+        System.out.println(" Fiza's Stock of Technology List");
         System.out.println(" ====================");
         System.out.println();
     }

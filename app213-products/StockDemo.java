@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -11,6 +11,8 @@ public class StockDemo
 {
     // The stock manager.
     private StockList stock;
+    
+    public ArrayList<Product> products;
 
     /**
      * Create a StockManager and populate it with at least
@@ -53,8 +55,6 @@ public class StockDemo
 
         sellProducts();
         stock.print();     
-        
-    
     }
     
     private void buyProducts()
