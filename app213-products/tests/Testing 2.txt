@@ -1,0 +1,32 @@
+fizaTech1.print();
+
+ Fiza's Stock of Technology List
+ ====================
+
+ ID 101: Samsung Galaxy S20 stock level: 2
+ ID 102: Apple iPhone 12 stock level: 2
+ ID 103: Google Pixel 4A stock level: 1
+ ID 104: Apple iPad Air stock level: 2
+ ID 105: Apple Airpods Pro stock level: 2
+ ID 106: Google Chromebook stock level: 3
+ ID 107: Samsung Z Flip stock level: 1
+ ID 108: HP Inspiron 15 Laptop stock level: 1
+ ID 109: Beats Headphones stock level: 2
+ ID 110: Apple Pen stock level: 3
+
+fizaTech1.remove(104)
+ ID 101: Samsung Galaxy S20 stock level: 2
+    returned Object <object reference>
+ ID 102: Apple iPhone 12 stock level: 2
+ ID 103: Google Pixel 4A stock level: 1
+fizaTech1.search("Samsung");
+fizaTech1.searchForProduct("Samsung");
+ ID 101: Samsung Galaxy S20 stock level: 2
+ ID 102: Apple iPhone 12 stock level: 2
+ ID 103: Google Pixel 4A stock level: 1
+ ID 105: Apple Airpods Pro stock level: 2
+ ID 106: Google Chromebook stock level: 3
+ ID 107: Samsung Z Flip stock level: 1
+ ID 108: HP Inspiron 15 Laptop stock level: 1
+ ID 109: Beats Headphones stock level: 2
+ ID 110: Apple Pen stock level: 3
