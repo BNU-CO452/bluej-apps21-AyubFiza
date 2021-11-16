@@ -1,0 +1,25 @@
+product1.print();
+ ID 104: Apple iPad Air stock level: 0
+product1.decreaseQuantity(5);
+product1.print();
+ ID 104: Apple iPad Air stock level: 0
+product1.increaseQuantity(8);
+product1.print();
+ ID 104: Apple iPad Air stock level: 8
+product1.decreaseQuantity(2);
+product1.print();
+ ID 104: Apple iPad Air stock level: 6
+Product product2 = new Product(105, "Apple Airpods Pro");
+product2.print();
+ ID 105: Apple Airpods Pro stock level: 0
+StockList stockLis1 = new StockList();
+stockLis1.add(product2);
+stockLis1.add(product1);
+stockLis1.print();
+
+ Fiza's Stock of Technology List
+ ====================
+
+ ID 105: Apple Airpods Pro stock level: 0
+ ID 104: Apple iPad Air stock level: 6
+
