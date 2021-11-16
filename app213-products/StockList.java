@@ -11,6 +11,11 @@ public class StockList
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    public ArrayList<Product> products;
+    
+    public int quantity;
+    public int id;
+    public String name; 
     //
     private int amountRequired;
     //Finds the product key
@@ -24,13 +29,17 @@ public class StockList
         stock = new ArrayList<Product>();
     }
     
+    /**
+     * Add a product to the list.
+     * 
+     */
     public void add(Product item)
     {   
             stock.add(item);
     }
     
     /**
-     * Add a product to the list.
+     * Removes product by Product ID.
      * @param item The product item to be added.
      */
     public Product remove(int productID)
@@ -39,10 +48,9 @@ public class StockList
         if (product!= null)
             stock.remove(product);
         else
-            System.out.println("Could not find student");
+            System.out.println("Could not find product");
             return product;
     }
-    
     
     /**
      * A method to buy a single quantity of the product
@@ -51,7 +59,6 @@ public class StockList
     {
       buyProduct(productID, 1);
     }
-    
     
     /**
      * Buy a quantity of a particular product.
@@ -83,6 +90,10 @@ public class StockList
     }
     }
 
+    /**
+     * Find a product to match the product name,
+     * if not found return null
+     */
     public void searchForProduct(String productName)
         {   
             for (Product product: stock)
@@ -101,9 +112,10 @@ public class StockList
         for(Product product : stock )
         {
             if(product.getID() == productID)
-            {
+            
                 return product;
-            }
+                System.out.println(product);
+            
         }
         return null;
     }
@@ -146,7 +158,14 @@ public class StockList
             return("Product not Found");
         }
     }
-
+    
+    public void search(String phrase)           
+    {   
+        if(phrase.contains("Samsung"))
+        {   
+        }
+    }
+    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
