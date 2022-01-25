@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  *
- * @author     Louie Fennell
- * @version    30.11.21
+ * @author     Fiza Ayub
+ * @version    25.01.2022
  */
 
 public class StockDemo
@@ -26,16 +26,16 @@ public class StockDemo
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
-        stock.add(new Product(101, "Audi TT"));
-        stock.add(new Product(102, "BMW M8 GC "));
-        stock.add(new Product(103, "Audi RS3"));
-        stock.add(new Product(104, "Mercedes AMG "));
-        stock.add(new Product(105, "Range Rover Evoque"));
-        stock.add(new Product(106, "Mercedes A class"));
-        stock.add(new Product(107, "Audi A8"));
-        stock.add(new Product(108, "Vauxhall Astra Griffin"));
-        stock.add(new Product(109, "Peugeot E-208 "));
-        stock.add(new Product(110, "BMW 220i"));
+        stock.add(new Product(101, "iPhone 12"));
+        stock.add(new Product(102, "iPad Air "));
+        stock.add(new Product(103, "AirPods Pro"));
+        stock.add(new Product(104, "Samsung Galaxy Z"));
+        stock.add(new Product(105, "Apple Pen"));
+        stock.add(new Product(106, "MacBook"));
+        stock.add(new Product(107, "Samsung Earbuds"));
+        stock.add(new Product(108, "Apple Watch"));
+        stock.add(new Product(109, "One Plus"));
+        stock.add(new Product(110, "Samsung Z Flip"));
         
     }
     

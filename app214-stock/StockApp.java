@@ -4,8 +4,8 @@
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author     Louie Fennell
- * @version    30.11.21
+ * @author    Fiza Ayub
+ * @version    25.01.2022
  */
 
 public class StockApp
@@ -45,7 +45,7 @@ public class StockApp
     }
     
     /**
-     * Checking Statment of whats been selected
+     * Checking the statement of what has been selected.
      */
     private boolean executeChoice(String choice)
     {
@@ -85,7 +85,7 @@ public class StockApp
     }
    
     /**
-     * adds a new product
+     * Adds a new product
      */
     private void addProduct()
     { 
@@ -102,11 +102,11 @@ public class StockApp
     }
     
     /**
-     * removes adds a new product
+     * Removes a new product
      */
     private void removeProduct()
     { 
-        System.out.println("Adding a new Product");
+        System.out.println("Removing a new Product");
         System.out.println();
         
         int id = reader.getInt("Please enter a product id >");
@@ -116,11 +116,11 @@ public class StockApp
     }
     
     /**
-     * buys a new product
+     * Purchases a new product
      */
     private void getProduct()
     { 
-        System.out.println("buy a new Product");
+        System.out.println("Purchases a new Product");
         System.out.println();
         
         int id = reader.getInt("Please enter a product id >");
@@ -130,7 +130,7 @@ public class StockApp
     }
     
     /**
-     * sells a new product
+     * Sells a new product
      */
     private void loseProduct()
     { 
@@ -144,11 +144,11 @@ public class StockApp
     }
     
     /**
-     * checks a new product
+     * Searches for a new product
      */
     private void checkProduct()
     { 
-        System.out.println("buy a new Product");
+        System.out.println("Search for a new Product");
         System.out.println();
         
         String phrase = reader.getString("Please enter a product id >");
@@ -157,7 +157,7 @@ public class StockApp
     }
     
     /**
-     * checks Stock
+     * Checks Stock
      */
     private void stockProduct()
     {
@@ -174,7 +174,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buys a product");
         System.out.println("    Sell:       Sells a product");
-        System.out.println("    Check:      Searchs for part of name or product");
+        System.out.println("    Search:     Searches for part of name or product");
         System.out.println("    Stock:      Restocks the for part of name or product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
@@ -188,7 +188,7 @@ public class StockApp
     {
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
-        System.out.println("      by Louie Fennell");
+        System.out.println("      by Fiza Ayub");
         System.out.println("********************************");
     }
 }

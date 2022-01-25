@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  *
- * @author     Louie Fennell
- * @version    30.11.21
+ * @author     Fiza Ayub
+ * @version    25.01.2022
  */
 
 public class StockList
@@ -50,7 +50,7 @@ public class StockList
     }
     
     /**
-     * A method to buy a single quantity of the product
+     * A method to buy a single quantity of the product.
      */
     public void buyProduct(int productID)
     {
@@ -70,7 +70,7 @@ public class StockList
     
     /**
      * Check levels of stock
-     * If the stock is less than minimum it will buy in more
+     * If the stock is less than the minimum it will purchase more.
      */
     public void lowStocklist()
     {
@@ -118,7 +118,7 @@ public class StockList
     }
 
     /**
-     * Sells one product
+     * Sells one product.
      */
     public void sellProduct(int productID)
     {
@@ -202,7 +202,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Louie's Car stock");
+        System.out.println(" Fiza's Stock List ");
         System.out.println(" ====================");
         System.out.println();
     }
