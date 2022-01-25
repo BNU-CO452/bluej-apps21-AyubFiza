@@ -4,8 +4,9 @@ import java.util.ArrayList;
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  *
- * @author     Fiza Ayub
- * @version    25.01.2022
+ * @author    Fiza Ayub
+ * @version    30.11.21
+>>>>>>> 76fc6d59158ca991c6793eee2478f4162da7515a
  */
 
 public class StockDemo
